@@ -1,0 +1,39 @@
+
+default:
+  save:
+    init: true
+    image: true
+    output: true
+    video: true
+    loss: true
+    cq: true
+    time: true
+  num_iter: 300
+  lr_base:
+    point: 1
+    decay: 0.5
+  seed: 0
+  loss:
+    use_l1_loss: false
+    edge_loss_weight: 0.01
+    xing_loss_weight: 0
+    structure_loss_weight: 0.1
+    loss_weight: 1
+
+  bg: black
+  cq_para:
+    color_num: 200 # 数量阈值,低于阈值将被混合
+    color_distance: 2000 # rgb差值内的将被混合
+    # 是否ours量化
+    use_cq: true
+    # 如果设置kmeans数量就相当于使用kmeans量化
+    use_cq_kmeans:
+    # 改变颜色的差值
+    fill_color_dis:
+    # 过滤联通域的大小
+    fill_size_dis: 10
+    # 是否进行孔洞填充的显示
+    use_fill: true
+    # 识别角锚点的最小距离
+    px_dis: 1.5
+experiment_1:
