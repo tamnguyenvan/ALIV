@@ -414,7 +414,7 @@ def layer_set_color(cq_res, con_color_dis, save_path, save, con_size_dis, fill,p
             print(f"\n颜色列表计算完成")
     # 创建一个与原图像大小相同的空白图像，初始化为黑色
     res = np.zeros((cq_res[0][0].shape[0], cq_res[0][0].shape[1], 3), dtype=np.uint8)
-    print(f"总连通域数量：{total}")
+    # print(f"总连通域数量：{total}")
     # 图结果
     connect_result = []
     binary_res = []
@@ -597,4 +597,5 @@ def count_layer_circle_order(circles):
 #     res, _ = layer_set_color(res,None,)
 #     f_time = time.time()
 #     print(str(f_time-s_time))
+
 #     cv2.imwrite('./curve_fit4/res.png',res)
